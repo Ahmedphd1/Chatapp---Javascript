@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Script that initialize socket.io instance -->
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script> 
+
+        <!-- Styling for html elements -->
+    <style>
+        #textid {
+            border-block-start-width: 10px;
+            border-color: green;
+            border-radius: 10px;
+            width: 1000px;
+            height: 800px;
+        }
+
+        #buttonid {
+            position: absolute;
+            top: 89%;
+            left: 23%;
+        }
+        #textlabel {
+            border: 5px solid red;
+            position: absolute;
+            top: 85%;
+            left: 20%;
+            width: 200px;
+        }
+    </style>
+
+</head>
+<body>
+        <!-- Html element for chatbox -->
+    <div>
+        <textarea id="textid"></textarea>
+    </div>
+        <!-- Html element for textbox -->
+    <div>
+        <form>
+            <input id="textlabel" type="text" placeholder="Enter text here">
+        </form>
+    </div>
+        <!-- Html element for button -->
+    <div>
+        <button id="buttonid">Send</button>
+    </div>
+</body>
+    <!-- Script that sends data to the server and update the chatbox -->
+<script defer src="client.js"></script>
+</html>
